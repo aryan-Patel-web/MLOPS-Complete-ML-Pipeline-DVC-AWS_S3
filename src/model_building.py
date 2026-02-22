@@ -28,9 +28,6 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-
-
-
 def load_params(params_path: str) -> dict:
     """Load parameters from a YAML file."""
     try:
@@ -125,7 +122,7 @@ def main():
         params = load_params('params.yaml')['model_building']
         train_data = load_data('./data/processed/train_tfidf.csv')
         X_train = train_data.iloc[:, :-1].values
-        y_train = np.asarray(train_data.iloc[:, -1].values)
+        y_train = train_data.iloc[:, -1].values
 
         clf = train_model(X_train, y_train, params)
         
