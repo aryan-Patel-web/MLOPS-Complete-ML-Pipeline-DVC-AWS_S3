@@ -76,6 +76,8 @@ def preprocess_df(df, text_column='text', target_column='target'):
         logger.error('Error during text normalization: %s', e)
         raise
 
+
+
 def main(text_column='text', target_column='target'):
     """
     Main function to load raw data, preprocess it, and save the processed data.
