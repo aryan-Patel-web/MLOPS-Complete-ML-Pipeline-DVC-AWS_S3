@@ -28,6 +28,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
+
 def load_params(params_path: str) -> dict:
     """Load parameters from a YAML file."""
     try:
